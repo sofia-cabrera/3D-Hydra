@@ -1,0 +1,24 @@
+
+// draw a spinning box
+// with width, height and depth of 200
+function setup() {
+  createCanvas(500, 500, WEBGL);
+  describe('figuras rotando en 3D space');
+  //background(150 ,100 , 20);
+  background(0);
+}
+
+function draw() {
+  
+  rotateX(frameCount * 0.01);
+  rotateY(frameCount * 0.01);
+  rotateZ(frameCount * 0.01);
+  //fill(250, 150 , 0)
+  
+  //box(200);
+  torus(100, 50);
+  //cone(150, 200);
+}
+
+//probando modificaciones en base al código de referencia de ej para box.
+//aproveché para probar otras figuras 3D
