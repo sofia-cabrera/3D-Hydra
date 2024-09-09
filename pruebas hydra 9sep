@@ -1,0 +1,40 @@
+pruebas de hoy 9 de septiembre en hydra:
+
+//p5 = new P5({mode: 'WEBGL'})  //Esto deben comentarlo luego de la primer ejecucion
+p5.hide()
+
+let doc1 = p5.loadModel("https://raw.githubusercontent.com/sofia-cabrera/3D-Hydra/main/mocos-estructura.obj");
+
+p5.draw = () => {
+	p5.background(0, 0, 0, 2);
+  	p5.orbitControl();//control de orbita con el mouse o pad
+  	p5.normalMaterial();//muestra el colorete del material
+	p5.push();
+	p5.stroke(255);//color de las aristas
+  	p5.scale(20);
+  	p5.model(doc1);
+  	p5.smooth(25);
+	p5.pop();
+}
+
+s0.init({src: p5.canvas})
+src(s0)
+
+.out(o0)
+
+noise(20,2)
+  //.color([1,0,0,1,0],[0,1,0,1,0],[0,0,1,1,0])
+  //.colorama([0.005,0.33,0.66,1.0].fast(0.125))
+	.layer(o0,3,0.5)
+  .out(o1)
+
+noise(50,8).layer(o0,3,0.5)//.invert([0,1])
+  .out(o2)
+
+voronoi(10,1,5).brightness(()=>Math.random()*0.15)
+  .modulatePixelate(noise(25,0.5),100)
+	.layer(o0,3,0.5)
+  .out(o3)
+
+render()
+
