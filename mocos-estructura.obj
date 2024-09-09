@@ -1,6 +1,6 @@
 # Blender 4.2.1 LTS
 # www.blender.org
-mtllib mocos-estructura.mtl
+//mtllib mocos-estructura.mtl
 o MetaBola.014
 v -71.303154 18.752579 30.066650
 v -63.966354 22.989273 28.160980
